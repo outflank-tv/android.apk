@@ -1,37 +1,229 @@
-<!DOCTYPE html><html><head> <meta charset="utf-8">	<title>Software STORE — 𝐎𝐮𝐭𝐟𝐥𝐚𝐧𝐤 丅ᐯ</title>	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝐎𝐮𝐭𝐟𝐥𝐚𝐧𝐤 丅ᐯ - SOFTWARE | Author : NUR MOHAMMAD</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
 
-<style>
+button {
+    padding: 130px 4px;
+    font-size: 10px;
+    cursor: pointer;
+    background: transparent;
+    color: #e7e7d4fa;
+}
+
+#notification {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 35px;
+    background-color: #0000008c;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#notification.show {
+    display: block;
+}
+
+.closebtn {
+    margin-left: 9px;
+    color: red;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+    </style>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .share-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .share-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .share-button i {
+            margin-right: 8px;
+        }
+        .share-button.facebook { background-color: #3b5998; }
+        .share-button.twitter { background-color: #1da1f2; }
+        .share-button.linkedin { background-color: #0077b5; }
+        .share-button.whatsapp { background-color: #25d366; }
+        .share-button.telegram { background-color: #0088cc; }
+        .share-button.pinterest { background-color: #bd081c; }
+        .share-button.reddit { background-color: #ff4500; }
+        .share-button:hover {
+            opacity: 0.8;
+        }
+    </style>
     
-    *{margin:0;padding:0;font-family:Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}::-webkit-scrollbar{width:0;height:0}html:hover ::-webkit-scrollbar-thumb{background:rgba(0,0,0,.5);width:0;height:0}::-webkit-scrollbar-thumb{background:rgba(0,0,0,.2);width:0;height:0}body,html{height:100%;min-height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}body{background-image:url(../images/background@2x.png);background-size:34px 34px;background-repeat:repeat}.topline{padding:16px 30px;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;text-align:center;background-color:#fff;box-shadow:0 1px 8px 0 rgba(0,0,0,.3)}.topline img{margin-right:10px}.topline span{color:#14102E;font-size:22px}@media screen and (max-width:500px){.topline{padding:10px}.topline span{font-size:17px}}.main{padding:30px;text-align:center;position:relative;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;max-width:100%;overflow:auto;overflow-x:hidden}.main__top{position:relative}.monsters{height:520px;position:relative;z-index:1;max-width:1000px;margin:40px auto 0}.logo{opacity:1!important;-webkit-transform:translateX(-50%) translateY(-50px);-ms-transform:translateX(-50%) translateY(-50px);transform:translateX(-50%) translateY(-50px)}.monsters > img{opacity:0}.monsters__right{position:absolute;margin-right:-100px;right:0;top:0}.monsters__left{position:absolute;margin-left:-50px;top:140px;left:0}@media screen and (max-width:1300px){.monsters__right{}}@media screen and (max-width:900px){.monsters{height:450px}.monsters__left{width:40%;top:70px}.monsters__right{width:50%}.monsters__center{width:25%}}@media screen and (max-width:800px){.monsters .monsters__center{margin-left:-70px}}@media screen and (max-width:700px){.monsters{height:400px}.logo{width:250px}}@media screen and (max-width:600px){}@media screen and (max-width:500px){.monsters__left{width:75%;left:-120px}.monsters__right{width:85%;right:-116px}.monsters__center{width:40%}.logo{-webkit-transform:translateX(-30%) translateY(-50px);-ms-transform:translateX(-30%) translateY(-50px);transform:translateX(-30%) translateY(-50px)}}@media screen and (max-width:420px){.monsters__left{width:85%;top:100px}.monsters__right{width:95%}.monsters__center{width:50%}}@media screen and (max-width:400px){.logo{width:210px;-webkit-transform:translateX(-20%) translateY(-50px);-ms-transform:translateX(-20%) translateY(-50px);transform:translateX(-20%) translateY(-50px)}}@media screen and (max-width:360px){.monsters__left{width:95%;top:120px}.monsters__right{width:105%}.monsters__center{width:50%}}@media screen and (max-width:320px){.monsters__left{width:105%;left:-140px}.monsters__right{width:115%}.monsters__center{width:55%}}.monsters__center{position:absolute;z-index:1;bottom:0;left:50%;margin-left:-140px}.button_wrapper{margin-top:20px;border:1px solid #DFDFDF;background-color:#fff;padding:15px 20px;display:inline-block;z-index:1;position:relative;opacity:0;-webkit-transition:opacity .5s ease;transition:opacity .5s ease}.button_wrapper .arrow{position:absolute;right:100%;margin-right:17px;bottom:30px}@media screen and (max-width:600px){.button_wrapper .arrow{display:none}}@-webkit-keyframes change-background{0%{background-color:#127EF2}25%{background-color:#39C538}50%{background-color:#F15A24}75%{background-color:#93278F}100%{background-color:#127EF2}}@keyframes change-background{0%{background-color:#127EF2}25%{background-color:#39C538}50%{background-color:#F15A24}75%{background-color:#93278F}100%{background-color:#127EF2}}.button{width:400px;height:80px;border-radius:4px;background-color:#127EF2;text-decoration:none;color:#fff;font-weight:700;font-size:30px;text-align:center;display:block;line-height:80px;text-transform:uppercase;-webkit-transition:background-color .2s ease;transition:background-color .2s ease;position:relative;-webkit-animation:change-background 4s ease infinite;animation:change-background 4s ease infinite}.button:before{content:"";display:inline-block;width:0;height:0;border-style:solid;border-width:9px 0 9px 16px;border-color:transparent transparent transparent #fff;position:absolute;left:20px;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}.button:hover{-webkit-animation:0;animation:0;background-color:#39C538}.button:active{-webkit-animation:0;animation:0;background-color:#959595}@media screen and (max-width:440px){.main{padding:20px;}.button_wrapper{border:none;padding:0;width:100%;margin-top:30px}.button{max-width:100%;width:100%}}.share{margin-top:30px;opacity:0;-webkit-transition:opacity .5s ease;transition:opacity .5s ease}.share__text{color:#14102E;font-size:14px;margin-bottom:18px}.circles div{position:absolute}.circles div:first-child{width:42px;height:42px;background-color:#16C0F7;border-radius:42px;top:76px;left:50%;margin-left:-550px}.circles div:nth-child(2){width:30px;height:30px;border-radius:30px;background-color:#EAEA0F;left:50%;bottom:0;margin-left:-600px}.circles div:nth-child(3){width:20px;height:20px;border-radius:20px;background-color:#16C0F7;left:50%;margin-left:-340px;bottom:-90px}.circles div:nth-child(4){width:34px;height:34px;background-color:#F15A24;border-radius:34px;bottom:-200px;left:50%;margin-left:-600px}.circles div:nth-child(5){width:36px;height:36px;border-radius:36px;background-color:#39C538;right:50%;margin-right:-600px;top:60px}.circles div:nth-child(6){background-color:#EAEA0F;width:24px;height:24px;border-radius:24px;right:50%;margin-right:-540px;top:244px}.circles div:nth-child(7){width:50px;height:50px;border-radius:50px;background-color:#39C538;right:50%;margin-right:-400px;bottom:0}.circles div:nth-child(8){width:80px;height:80px;background-color:#E63455;border-radius:80px;right:50%;margin-right:-600px;bottom:-200px}@media screen and (max-width:700px){.circles div:first-child{top:20px;left:0;margin-left:10px}.circles div:nth-child(2){left:50%;bottom:0;margin-left:-150px}.circles div:nth-child(5){right:50%;margin-right:-200px;top:-30px}.circles div:nth-child(6){margin-right:-300px;top:300px}.circles div:nth-child(7){right:37px;bottom:-67px;margin-right:0}}.fadein{opacity:1;-webkit-transition:opacity .5s ease-in;transition:opacity .5s ease-in}@-webkit-keyframes bounceIn{0%,20%,40%,60%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}20%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}40%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}to{opacity:1;-webkit-transform:scaleX(1);transform:scaleX(1)}}@keyframes bounceIn{0%,20%,40%,60%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}20%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}40%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}to{opacity:1;-webkit-transform:scaleX(1);transform:scaleX(1)}}.bounceIn{-webkit-animation-name:bounceIn;animation-name:bounceIn}.animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}.animated.bounceIn{-webkit-animation-duration:.75s;animation-duration:.75s}.visible{opacity:1 !important;} @media screen and (min-width: 900px) and (max-height: 800px) {.monsters {}}
-</style>
-	<meta name="viewport" content="width=device-width, initial-scale=1">	<link rel="shortcut icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhBc0dejXXxv_C6AnBcVzxGS869i1fOLCkohmit92jX0Z1Oazzp0iC9PQdFw0-Dq3xdkvL3XDzNUEr7QpBp1cxcm93yG_8MX3A19UL6qWyjzqyU9ewMGzH7Jv6US16V3tWKnxOgfz8P0TICxWO2fcRHr7bNmxhqtA-CxLtObrZcMKO1H00IhyHshld5fg/s1028/1000035285.png" type="image/x-icon">	<meta name="description" content="𝐎𝐮𝐭𝐟𝐥𝐚𝐧𝐤 丅ᐯ | Best Live Streaming Satellite TV Channels and Social Networking ANDROID App & Use PC!"> <meta name="keywords" content="agario, agar, io, cell, cells, virus, bacteria, blob, game, games, web game, html5, fun"> <meta name="robots" content="index, follow">
-<meta property="og:type" content="website"/> <meta property="og:url" content="https://m.facebook.com/ovationofficial/"/> <meta property="og:title" content="Ovation Bangladesh"/> <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhBc0dejXXxv_C6AnBcVzxGS869i1fOLCkohmit92jX0Z1Oazzp0iC9PQdFw0-Dq3xdkvL3XDzNUEr7QpBp1cxcm93yG_8MX3A19UL6qWyjzqyU9ewMGzH7Jv6US16V3tWKnxOgfz8P0TICxWO2fcRHr7bNmxhqtA-CxLtObrZcMKO1H00IhyHshld5fg/s1028/1000035285.png"/>  <meta property="og:site_name" content="𝐎𝐮𝐭𝐟𝐥𝐚𝐧𝐤 丅ᐯ"/></head>	<body>	 
-<div class="topline">		<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxteTEe3zCoQTdLe1rMFEZ8wSjty5s3VIrj3YOq3cx0v69MaBrQem8s9EEEZSlJi7UnIqBGjyV_hiiXj2alHNApQcQoRgKSfy8v0oZLZnY1-jEB_jRmXwdbyBqMS6mAc83xStIiNVBgwNzvgMHTHcDlsj995hPhxRToN_1lvlpVTDJeNIZYvC5MnqiKA/s115/1000040503.png" srcset="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxteTEe3zCoQTdLe1rMFEZ8wSjty5s3VIrj3YOq3cx0v69MaBrQem8s9EEEZSlJi7UnIqBGjyV_hiiXj2alHNApQcQoRgKSfy8v0oZLZnY1-jEB_jRmXwdbyBqMS6mAc83xStIiNVBgwNzvgMHTHcDlsj995hPhxRToN_1lvlpVTDJeNIZYvC5MnqiKA/s115/1000040503.png" />		<span>Download and Install this app❗	<script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-share-url="https://outflank-tv.github.io/android.apk/" data-comment="𝐎𝐮𝐭𝐟𝐥𝐚𝐧𝐤 丅ᐯ | Best Live Streaming Satellite TV Channels and Social Networking ANDROID App & Use PC!" data-size="large"></script>
-</span>	</div>	
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEidfGPSM-4HOnmxTZDNnh5lT9E7ctfv1HiJ79RCFmwF2uOzUJkuc37vQQG5R6jj9tsWdQN_v-Pc5sxrq6uCtKqAjnHn1WqhlvqTAmAJ604kPUgbOPnA1Ol0k4OUFTfEgrJ_OlGUGOXMbcDwVVdFhwWhgG31QCwolOid8XZ_Mczt7DdSDpSrv0CpQs2Zsw/s1920/Wait%20max%2020-25%20seconds%20for%20channel%20to%20load_20240907_120220_0000.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .download-btn {
+            background-color: #040f0c8a;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: background-color 0.3s ease;
+        }
+        .download-btn:hover {
+            background-color: #096a5450;
+            color: white;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ꪶꪖꪻꫀᦓꪻ ꪜꫀ᥅ᦓﺃꪮꪀ</h1>
+        <p>	🔰 Enjoy unlimited satellite TV channels live streaming, amazing features and 100% secure social media tools in our app! 
+        The app's new features and channels are being updated without any problems!</p>
+        <p>“ Click the button below to download the APK file! ”</p>
+        <a href="https://apk.e-droid.net/apk/app3198300-k7938i.apk?v=7" class="download-btn" download>ＤＯＷＮＬＯＡＤ  📱</a>
+    </div>
+    
+    
+    <button onclick="showNotification()">🅢<p>🅗</p><p>🅐</p><p>🅡</p><p>🅔</p></button>
+    <div id="notification" class="hidden">
+        <span class="closebtn" onclick="closeNotification()">×</span>
+        Share with friends!
+        <p> </p>
+        <div class="menu">
+        <div class="share-buttons">
+        <a href="#" class="share-button facebook" onclick="share('facebook')"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="share-button twitter" onclick="share('twitter')">
+            <i class="fab fa-twitter"></i></a>
+        <a href="#" class="share-button linkedin" onclick="share('linkedin')">
+            <i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="share-button whatsapp" onclick="share('whatsapp')">
+            <i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="share-button telegram" onclick="share('telegram')">
+            <i class="fab fa-telegram-plane"></i></a>
+        
+    </div>
+    </div>
+    <audio id="notificationSound" src="https://codeskulptor-demos.commondatastorage.googleapis.com/descent/gotitem.mp3" preload="auto"></audio>
+    
+    
+    
+    <script>
+        document.querySelector('.download-btn').addEventListener('click', function() {
+            alert('Your download will start shortly!');
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.btn-menu').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.btn-menu').forEach(btn => btn.classList.remove('selected'));
+        button.classList.add('selected');
+    });
+});
 
+    </script>
+    
+   <script>
+        function showNotification() {
+    var notification = document.getElementById("notification");
+    var sound = document.getElementById("notificationSound");
+    notification.classList.add("show");
+    sound.play();
+}
 
+function closeNotification() {
+    var notification = document.getElementById("notification");
+    notification.classList.remove("show");
+}
 
+    </script>
+    <script>
+        function share(platform) {
+            let url = window.location.href;
+            let text = "𝐎𝐮𝐭𝐟𝐥𝐚𝐧𝐤 丅ᐯ - SOFTWARE | Enjoy unlimited satellite TV channels live streaming, amazing features and 100% secure social media tools in this app! | Check out this awesome page! 👋";
+            let shareUrl = "";
 
-	<script>
-		var monster1 = document.getElementById('monster1'),			monster2 = document.getElementById('monster2'),			monster3 = document.getElementById('monster3'),			button_wrapper = document.getElementById('button_wrapper'),			share = document.getElementById('share');
-		setTimeout(function() {			monster2.classList.add('bounceIn')			monster2.classList.add('animated')		}, 200);
-		setTimeout(function() {			monster1.classList.add('bounceIn')			monster1.classList.add('animated')		}, 400);
-		setTimeout(function() {			monster3.classList.add('bounceIn')			monster3.classList.add('animated')
-			setTimeout(function() {
-				monster1.classList.remove('bounceIn')				monster1.classList.remove('animated')				monster1.classList.add('visible')
-				monster2.classList.remove('bounceIn')				monster2.classList.remove('animated')				monster2.classList.add('visible')
-				monster3.classList.remove('bounceIn')				monster3.classList.remove('animated')				monster3.classList.add('visible')			}, 1000)		}, 800);
-		setTimeout(function() {			button_wrapper.classList.add('fadein')		}, 1000);
-		setTimeout(function() {			share.classList.add('fadein')		}, 1200);
-		var mouseMoveInited = false
-		function onMouseMove(e) {			var x = e.clientX,				y = e.clientY;
-			monster1.style['transform'] = 'translateX(' + (e.clientX*0.03-50) + 'px) translateY(' + (-e.clientY*0.1) + 'px)';			monster2.style['transform'] = 'translateX(' + (50-e.clientX*0.05) + 'px) translateY(' + (20-e.clientY*0.05) + 'px)';			monster3.style['transform'] = 'translateX(' + (e.clientX*0.06-80) + 'px) translateY(' + (20-e.clientY*0.03) + 'px)';		}
-		function check () {			if (window.innerWidth > 1000) {				if (mouseMoveInited) return false				mouseMoveInited = true				window.addEventListener('mousemove', onMouseMove);			} else if (mouseMoveInited) {				mouseMoveInited = false				monster1.style['transform'] = '';				monster2.style['transform'] = '';				monster3.style['transform'] = '';				window.removeEventListener('mousemove', onMouseMove);			}		}
-		window.addEventListener('resize', check)
-		check()	</script>
-		
-		
-	
-<iframe style="border:1px #FFFFFF solid" src="https://www.appcreator24.com/app3198300-k7938i" title="𝐎𝐮𝐭𝐟𝐥𝐚𝐧𝐤 丅ᐯ - iFrame" width="100%" height="395px" scrolling="no" frameborder="yes" allow="fullscreen"></iframe>
+            switch(platform) {
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+                    break;
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+                    break;
+                case 'linkedin':
+                    shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(text)}`;
+                    break;
+                case 'whatsapp':
+                    shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text + " " + url)}`;
+                    break;
+                case 'telegram':
+                    shareUrl = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+                    break;
+                
+            }
 
-		</body></html>
+            window.open(shareUrl, '_blank');
+        }
+    </script>
+</body>
+</html> 
+    
